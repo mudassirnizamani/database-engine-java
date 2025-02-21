@@ -40,6 +40,21 @@
       <artifactId>junit-jupiter-params</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <dependency>
+    <groupId>com.opencsv</groupId>
+    <artifactId>opencsv</artifactId>
+    <version>5.9</version>
+</dependency>
+
+    		<dependency>
+			<groupId>org.antlr</groupId>
+
+			<artifactId>antlr4</artifactId>
+			<!--	DO NOT CHANGE THE VERSION OTHERWISE THE SQL PARSER WON'T WORK-->
+			<version>4.9.2</version>
+		</dependency>
+
   </dependencies>
 
   <build>
@@ -74,6 +89,14 @@
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>3.1.2</version>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.5.0</version>
+            <configuration>
+                <mainClass>app.App</mainClass>
+            </configuration>
         </plugin>
         <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
         <plugin>
